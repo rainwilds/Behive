@@ -120,6 +120,9 @@ header {
             var(--color-accent-opaque-dark));
             grid-area: 1 / 1 / -1 / -1;
             height: 100vh;
+    background-image: url(./img/RE-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header>h1 {
