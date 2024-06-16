@@ -74,14 +74,13 @@ input
     /* -- font -- */
 
     /* font 1 */
-    --font-1-family: "p22-stickley-pro-text", serif;
+    --font-1-family: acumin-pro, sans-serif;
     /* --font-1-weight-light: 400; PLACEHOLDER */
-    --font-1-weight-medium: 400;
-    /* --font-1-weight-heavy: 400; PLACEHOLDER */
-
+    /* --font-1-weight-medium: 400 PLACEHOLDER; */
+    --font-1-weight-heavy: 700;
     /* font 2 */
-    --font-2-family: "lato", sans-serif;
-    /* --font-2-weight-light: 400; PLACEHOLDER */
+    --font-2-family: myriad-pro, sans-serif;
+    --font-2-weight-light: 300;
     --font-2-weight-medium: 400;
     --font-2-weight-heavy: 700;
     --font-2-size-small: 15px;
@@ -115,12 +114,62 @@ body {
     background-color: light-dark(var(--color-background-light), var(--color-background-dark));
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-1-family);
+    line-height: 1;
+
+    /* adobe font requirements */
+
+    font-weight: var(--font-1-weight-heavy);
+    font-style: normal;
+
+    /***/
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: var(--space-medium);
+
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-size: 1.1rem;
+}
+
 header {
     display: grid;
     background-color: light-dark(var(--color-accent-opaque-light),
             var(--color-accent-opaque-dark));
-            grid-area: 1 / 1 / -1 / -1;
-            height: 70vh;
+    grid-area: 1 / 1 / -1 / -1;
+    height: 70vh;
     background-image: url(./img/RE-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
