@@ -137,7 +137,6 @@ h4,
 h5,
 h6 {
     padding-bottom: var(--space-medium);
-
 }
 
 h1 {
@@ -164,6 +163,15 @@ h6 {
     font-size: 1.1rem;
 }
 
+p {
+    color: light-dark(var(--color-contrast-light),
+            var(--color-contrast-dark));
+}
+
+p:not(:last-of-type) {
+    margin-bottom: var(--space-medium);
+}
+
 header {
     display: grid;
     background-color: light-dark(var(--color-accent-opaque-light),
@@ -175,7 +183,7 @@ header {
     background-size: cover;
 }
 
-header>h1 {
+header>hgroup {
     grid-area: 1 / 1 / span 2 / span 2;
     z-index: 2;
     background-color: #ff7f5082;
@@ -184,12 +192,13 @@ header>h1 {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     align-content: end;
+    padding: var(--space-medium);
 }
 
 header>nav {
-    grid-column: 4 / span 4;
-    justify-self: end;
-    align-self: center;
+    grid-area: 1 / 1 / 2 / 9;
+    z-index: 3;
+    justify-self: center;
 }
 
 header>nav ul {
@@ -211,51 +220,6 @@ header nav a {
 
 header nav nav a {
     padding: none;
-}
-
-header nav a#header-nav-active {
-    background-color: light-dark(var(--color-accent-light),
-            var(--color-accent-dark));
-
-    color: light-dark(var(--color-contrast-dark),
-            var(--color-contrast-light));
-    border: none;
-
-}
-
-header nav a:not(#header-nav-active)>i {
-    visibility: hidden;
-}
-
-header nav a:not(#header-nav-active):hover {
-    background-color: light-dark(var(--color-accent-opaque-light),
-            var(--color-accent-opaque-dark));
-    color: light-dark(var(--color-contrast-light),
-            var(--color-contrast-dark));
-    padding: var(--space-medium);
-}
-
-header nav a:not(#header-nav-active):hover i {
-    visibility: visible;
-}
-
-nav {
-    grid-area: 1 / 1 / 2 / 9;
-    z-index: 3;
-    justify-self: center;
-}
-
-nav li a[href*="plants"]+nav {
-    background-color: light-dark(var(--color-background-light), var(--color-background-dark));
-    padding: var(--space-small);
-    position: absolute;
-    z-index: 2;
-    visibility: none;
-    border: solid 1px light-dark(var(--color-contrast-light), var(--color-contrast-dark));
-}
-
-nav li a[href*="plants"]:hover+nav {
-    visibility: block;
 }
 
 /***/
