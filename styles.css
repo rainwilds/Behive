@@ -127,6 +127,7 @@ h5,
 h6 {
     font-family: var(--font-1-family);
     line-height: 1;
+    padding-bottom: var(--space-medium);
 
     /* adobe font requirements */
 
@@ -134,14 +135,6 @@ h6 {
     font-style: normal;
 
     /***/
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    padding-bottom: var(--space-medium);
 }
 
 h1 {
@@ -189,15 +182,15 @@ header {
 }
 
 header>hgroup {
-    grid-area: 1 / 2 / span 2 / span 2;
+    grid-area: 1 / 2 / 2 / span 3;
     z-index: 2;
     background-color: #ff7f5082;
     height: fit-content;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    align-content: end;
-    padding: var(--space-medium);
     align-self: end;
+    bottom: var(--space-huge);
+    position: relative;
 }
 
 header>nav {
