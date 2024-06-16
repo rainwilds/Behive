@@ -5,6 +5,12 @@
     padding: 0;
 }
 
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
 img,
 picture {
     max-width: 100%;
