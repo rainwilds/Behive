@@ -109,7 +109,7 @@ input
 
 body {
     display: grid;
-    grid-template: min-content auto min-content / 10vw repeat(6, 1fr) 10vw;
+    grid-template: 100vh auto min-content / 10vw repeat(6, 1fr) 10vw;
     column-gap: var(--space-medium);
     background-color: light-dark(var(--color-background-light), var(--color-background-dark));
 }
@@ -174,10 +174,10 @@ p:not(:last-of-type) {
 
 header {
     display: grid;
+    grid-template: subgrid / subgrid;
+    grid-area: 1 / 1 / -1 / -1;
     background-color: light-dark(var(--color-accent-opaque-light),
             var(--color-accent-opaque-dark));
-    grid-area: 1 / 1 / -1 / -1;
-    height: 70vh;
     background-image: url(./img/RE-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
