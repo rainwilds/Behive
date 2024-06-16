@@ -1,0 +1,112 @@
+/* -- browser reset and fix -- */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+  
+  button,
+  input
+  
+  /* select, TEST */
+  /* textarea TEST */
+    {
+    font: inherit;
+    background-color: light-dark(var(--color-accent-opaque-light), var(--color-accent-opaque-dark));
+    padding: var(--space-tiny);
+    border: none;
+  }
+  
+  /***/
+  
+  :root {
+  
+    /* -- space -- */
+  
+    --space-tiny: 0.5rem;
+    --space-small: 1rem;
+    --space-medium: 2rem;
+    --space-large: 3.5rem;
+    --space-huge: 5rem;
+  
+    /***/
+  
+    /* -- colours -- */
+  
+    color-scheme: light dark;
+  
+    --color-background-light: #cce4ce;
+    --color-background-dark: #26453d;
+  
+    --color-accent-light: #509180;
+    --color-accent-dark: #cff2d2;
+  
+    --color-accent-opaque-light: rgb(44, 68, 61, 0.2);
+    --color-accent-opaque-dark: rgb(208, 227, 207, 0.2);
+  
+    --color-contrast-light: black;
+    --color-contrast-dark: white;
+  
+    --color-contrast-light-1: rgba(0, 0, 0, 0.1);
+    --color-contrast-dark-1: rgba(255, 255, 255, 0.1);
+  
+    --color-contrast-light-4: rgba(0, 0, 0, 0.4);
+    --color-contrast-dark-4: rgba(255, 255, 255, 0.4);
+  
+    --color-contrast-light-6: rgba(0, 0, 0, 0.6);
+    --color-contrast-dark-6: rgba(255, 255, 255, 0.6);
+  
+    --color-contrast-light-8: rgba(0, 0, 0, 0.8);
+    --color-contrast-dark-8: rgba(255, 255, 255, 0.8);
+  
+    /* --color--static--light: white; PLACEHOLDER */
+    /* --color--static--dark: black; PLACEHOLDER */
+  
+    /***/
+  
+    /* -- font -- */
+  
+    /* font 1 */
+    --font-1-family: "p22-stickley-pro-text", serif;
+    /* --font-1-weight-light: 400; PLACEHOLDER */
+    --font-1-weight-medium: 400;
+    /* --font-1-weight-heavy: 400; PLACEHOLDER */
+  
+    /* font 2 */
+    --font-2-family: "lato", sans-serif;
+    /* --font-2-weight-light: 400; PLACEHOLDER */
+    --font-2-weight-medium: 400;
+    --font-2-weight-heavy: 700;
+    --font-2-size-small: 15px;
+    --font-2-size-medium: 18px;
+    --font-2-size-large: 20px;
+  
+    /* base font */
+    font-family: var(--font-2-family);
+    font-size: var(--font-2-size-medium);
+  
+    /* adobe font requirements */
+    font-weight: var(--font-2-weight-medium);
+    font-style: normal;
+  
+    /***/
+  
+    /* -- image -- */
+  
+    --aspect-ratio: 1 / 1;
+  
+    /***/
+  
+  }
+  
+  /* -- tags -- */
+  
+  
+  /***/
