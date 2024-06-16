@@ -189,11 +189,11 @@ header {
     display: grid;
     grid-template: subgrid / subgrid;
     grid-area: 1 / 1 / -1 / -1;
-    /* background-color: light-dark(var(--color-accent-opaque-light),
+    background-color: light-dark(var(--color-accent-opaque-light),
             var(--color-accent-opaque-dark));
     background-image: url(./img/RE-image.jpg);
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 }
 
 header>video {
