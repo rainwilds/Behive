@@ -3,82 +3,82 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
-  img,
-  picture {
+}
+
+img,
+picture {
     max-width: 100%;
     display: block;
     box-sizing: border-box;
-  }
-  
-  button,
-  input
-  
-  /* select, TEST */
-  /* textarea TEST */
+}
+
+button,
+input
+
+/* select, TEST */
+/* textarea TEST */
     {
     font: inherit;
     background-color: light-dark(var(--color-accent-opaque-light), var(--color-accent-opaque-dark));
     padding: var(--space-tiny);
     border: none;
-  }
-  
-  /***/
-  
-  :root {
-  
+}
+
+/***/
+
+:root {
+
     /* -- space -- */
-  
+
     --space-tiny: 0.5rem;
     --space-small: 1rem;
     --space-medium: 2rem;
     --space-large: 3.5rem;
     --space-huge: 5rem;
-  
+
     /***/
-  
+
     /* -- colours -- */
-  
+
     color-scheme: light dark;
-  
+
     --color-background-light: #cce4ce;
     --color-background-dark: #26453d;
-  
+
     --color-accent-light: #509180;
     --color-accent-dark: #cff2d2;
-  
+
     --color-accent-opaque-light: rgb(44, 68, 61, 0.2);
     --color-accent-opaque-dark: rgb(208, 227, 207, 0.2);
-  
+
     --color-contrast-light: black;
     --color-contrast-dark: white;
-  
+
     --color-contrast-light-1: rgba(0, 0, 0, 0.1);
     --color-contrast-dark-1: rgba(255, 255, 255, 0.1);
-  
+
     --color-contrast-light-4: rgba(0, 0, 0, 0.4);
     --color-contrast-dark-4: rgba(255, 255, 255, 0.4);
-  
+
     --color-contrast-light-6: rgba(0, 0, 0, 0.6);
     --color-contrast-dark-6: rgba(255, 255, 255, 0.6);
-  
+
     --color-contrast-light-8: rgba(0, 0, 0, 0.8);
     --color-contrast-dark-8: rgba(255, 255, 255, 0.8);
-  
+
     /* --color--static--light: white; PLACEHOLDER */
     /* --color--static--dark: black; PLACEHOLDER */
-  
+
     /***/
-  
+
     /* -- font -- */
-  
+
     /* font 1 */
     --font-1-family: "p22-stickley-pro-text", serif;
     /* --font-1-weight-light: 400; PLACEHOLDER */
     --font-1-weight-medium: 400;
     /* --font-1-weight-heavy: 400; PLACEHOLDER */
-  
+
     /* font 2 */
     --font-2-family: "lato", sans-serif;
     /* --font-2-weight-light: 400; PLACEHOLDER */
@@ -87,26 +87,115 @@
     --font-2-size-small: 15px;
     --font-2-size-medium: 18px;
     --font-2-size-large: 20px;
-  
+
     /* base font */
     font-family: var(--font-2-family);
     font-size: var(--font-2-size-medium);
-  
+
     /* adobe font requirements */
     font-weight: var(--font-2-weight-medium);
     font-style: normal;
-  
+
     /***/
-  
+
     /* -- image -- */
-  
+
     --aspect-ratio: 1 / 1;
-  
+
     /***/
-  
+
+}
+
+/* -- tags -- */
+
+body {
+    display: grid;
+    grid-template-columns: min-content auto min-content / 10vw repeat(6, 1fr) 10vw;
+    column-gap: var(--space-medium);
+    background-color: light-dark(var(--color-background-light), var(--color-background-dark));
+}
+
+header {
+    background-color: light-dark(var(--color-accent-opaque-light),
+        var(--color-accent-opaque-dark));
+
   }
   
-  /* -- tags -- */
-  
-  
-  /***/
+  header>h1 {
+    grid-area: 2 / 4 / span 1 / span 4;
+    z-index: 2;
+    background-color: #ff7f5082;
+    height: 100%;
+    width: 100%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+  }
+
+header>nav {
+    grid-column: 4 / span 4;
+    justify-self: end;
+    align-self: center;
+}
+
+header>nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header>nav ul>li {
+    display: inline-flex;
+}
+
+header nav a {
+    padding: var(--space-medium);
+    transition: background-color 0.5s ease-out,
+        color 0.5s ease-out;
+    border: none;
+}
+
+header nav nav a {
+    padding: none;
+}
+
+header nav a#header-nav-active {
+    background-color: light-dark(var(--color-accent-light),
+            var(--color-accent-dark));
+
+    color: light-dark(var(--color-contrast-dark),
+            var(--color-contrast-light));
+    border: none;
+
+}
+
+header nav a:not(#header-nav-active)>i {
+    visibility: hidden;
+}
+
+header nav a:not(#header-nav-active):hover {
+    background-color: light-dark(var(--color-accent-opaque-light),
+            var(--color-accent-opaque-dark));
+    color: light-dark(var(--color-contrast-light),
+            var(--color-contrast-dark));
+    padding: var(--space-medium);
+}
+
+header nav a:not(#header-nav-active):hover i {
+    visibility: visible;
+}
+
+nav li a[href*="plants"]+nav {
+    background-color: light-dark(var(--color-background-light), var(--color-background-dark));
+    padding: var(--space-small);
+    position: absolute;
+    z-index: 2;
+    visibility: none;
+    border: solid 1px light-dark(var(--color-contrast-light), var(--color-contrast-dark));
+}
+
+nav li a[href*="plants"]:hover+nav {
+    visibility: block;
+}
+
+/***/
