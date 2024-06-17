@@ -191,14 +191,14 @@ header {
     grid-area: 1 / 1 / -1 / -1;
     background-color: light-dark(var(--color-accent-opaque-light),
             var(--color-accent-opaque-dark));
-    background-image: url(./img/RE-image.jpg);
+    /* background-image: url(./img/RE-image.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 header>div {
     grid-area: 1 / 1 / 2 / 9;
-    background-color: blackc;
+    background-color: #0000005c;
     z-index: 2;
 }
 
@@ -211,8 +211,11 @@ header>video {
 header>div:hover{
     transition-property: background-color;
     transition-duration: 3s;
-    transition-delay: 2s;
-    background-color: #0000005c;
+    transition-delay: s;
+    background-color: transparent;
+}
+header>div:hover + * {
+    visibility: none;
 }
 header>nav {
     grid-area: 1 / 1 / 2 / 9;
