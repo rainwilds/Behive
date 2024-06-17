@@ -208,7 +208,11 @@ header>video {
     min-height: 100%;
     object-fit: cover;
 }
-
+header>div:hover{
+    transition-property: background-color;
+    transition-duration: 3s;
+    transition-delay: 2s;
+}
 header>nav {
     grid-area: 1 / 1 / 2 / 9;
     z-index: 3;
