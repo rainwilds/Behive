@@ -198,7 +198,7 @@ header {
 
 header>div {
     grid-area: 1 / 1 / 2 / 9;
-    background-color: #0000005c;
+    background-color: blackc;
     z-index: 2;
 }
 
@@ -212,6 +212,7 @@ header>div:hover{
     transition-property: background-color;
     transition-duration: 3s;
     transition-delay: 2s;
+    background-color: #0000005c;
 }
 header>nav {
     grid-area: 1 / 1 / 2 / 9;
