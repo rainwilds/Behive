@@ -196,6 +196,12 @@ header {
     background-size: cover;
 }
 
+header>div {
+    grid-area: 1 / 1 / 2 / 9;
+    background-color: #0000005c;
+    z-index: 2;
+}
+
 header>video {
     grid-area: 1 / 1 / 2 / 9;
     width: 100%;
@@ -234,7 +240,7 @@ header nav nav a {
 
 header>hgroup {
     grid-area: 1 / 2 / 2 / span 3;
-    z-index: 2;
+    z-index: 3;
     height: fit-content;
     align-self: end;
     bottom: var(--space-huge);
