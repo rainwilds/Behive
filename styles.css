@@ -214,8 +214,8 @@ header>div:hover{
     transition-delay: 1s;
     background-color: transparent;
 }
-header:hover div ~ nav {
-    visibility: none;
+header:hover div ~ * {
+    visibility: hidden;
 }
 header>nav {
     grid-area: 1 / 1 / 2 / 9;
