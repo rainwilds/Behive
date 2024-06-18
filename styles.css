@@ -214,8 +214,15 @@ header>div:hover{
     transition-delay: 1s;
     background-color: transparent;
 }
+header > div ~ *:not(video) {
+    opacity: 1;
+}
 header:hover > div ~ *:not(video) {
-    visibility: hidden;
+    /* visibility: hidden; */
+    transition-property: opacity;
+    transition-duration: 3s;
+    transition-delay: 1s;
+    opacity: 0;
 }
 header>nav {
     grid-area: 1 / 1 / 2 / 9;
