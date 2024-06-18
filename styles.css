@@ -214,9 +214,9 @@ header>div:hover{
     transition-delay: 1s;
     background-color: transparent;
 }
-header>div:hover ~ *:not(:hover) {
+header>div:hover *:not(:hover) {
     visibility: none;
-    content: 'asdfk jaslfd jsdkf jlsad fjl kfj';
+    filter: blur(10px);
 }
 header>nav {
     grid-area: 1 / 1 / 2 / 9;
