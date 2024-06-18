@@ -214,7 +214,7 @@ header>div:hover{
     transition-delay: 1s;
     background-color: transparent;
 }
-header>div:hover ~ nav {
+header:hover div ~ nav {
     visibility: none;
 }
 header>nav {
