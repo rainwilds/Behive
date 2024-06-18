@@ -211,7 +211,7 @@ header>video {
 header>div:hover{
     transition-property: background-color;
     transition-duration: 3s;
-    transition-delay: s;
+    transition-delay: 1s;
     background-color: transparent;
 }
 header>div:hover ~ * {
