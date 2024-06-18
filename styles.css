@@ -218,9 +218,8 @@ header > div ~ *:not(video) {
     opacity: 1;
 }
 header:hover > div ~ *:not(video) {
-    /* visibility: hidden; */
     transition-property: opacity;
-    transition-duration: 3s;
+    transition-duration: 2s;
     transition-delay: 1s;
     opacity: 0;
 }
