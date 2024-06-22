@@ -238,12 +238,12 @@ header>nav {
 header>nav ul {
     list-style-type: none;
     display: flex;
+    gap: var(--space-medium);
     align-items: center;
 }
 
 header>nav ul>li {
     display: inline-flex;
-    gap: var(--space-small);
 }
 
 header nav a {
