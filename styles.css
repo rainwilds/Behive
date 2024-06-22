@@ -105,7 +105,8 @@ input
     /***/
 
     /* -- image -- */
-
+    
+    /* used for gallery JS generation */
     --aspect-ratio: 1 / 1;
 
     /***/
@@ -242,10 +243,11 @@ header>nav ul {
 
 header>nav ul>li {
     display: inline-flex;
+    gap: var(--space-small);
 }
 
 header nav a {
-    padding: var(--space-medium);
+/*     padding: var(--space-medium); */
     transition: background-color 0.5s ease-out,
         color 0.5s ease-out;
     border: none;
