@@ -207,19 +207,19 @@ header>div {
     z-index: 2;
 }
 
-header>video {
+/* header>video {
     grid-area: 1 / 1 / 2 / 9;
     width: 100%;
     min-height: 100%;
     object-fit: cover;
-}
+} */
 header>div:hover{
     transition-property: background-color;
     transition-duration: 3s;
     transition-delay: 1s;
     background-color: transparent;
 }
-header > div ~ *:not(video) {
+/* header > div ~ *:not(video) {
     opacity: 1;
 }
 header:hover > div ~ *:not(video) {
@@ -227,7 +227,7 @@ header:hover > div ~ *:not(video) {
     transition-duration: 2s;
     transition-delay: 1s;
     opacity: 0;
-}
+} */
 header>nav {
     grid-area: 1 / 1 / 2 / 9;
     z-index: 3;
